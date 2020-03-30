@@ -1,0 +1,140 @@
+<HTML>
+<HEAD>
+<link rel="shortcut icon" href="http://z-aliyeva-sadykhzadeh.000webhostapp.com/img/icon.png" type="image/x-icon">
+<title>Конвертер Цветов | Coder Helper</title>
+<script src="C-color_converter_script_files/Hex-to-CMYK-script.js"></script>
+<script src="C-color_converter_script_files/Hex-to-RGB-script.js"></script>
+<script src="C-color_converter_script_files/RGB-to-CMYK-script.js"></script>
+<script src="C-color_converter_script_files/RGB-to-Hex-script-&-Color-Array.js"></script>
+<script src="C-color_converter_script_files/RGB-to-HSV-script.js"></script>
+</HEAD>
+<converters bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#660099">
+
+<center><a href="index.html"><img src="img/Logo2.png" style = "max-width: 360px;"></a></center>
+<h2 align = "center">Конвертер Различных Кодов Цвета</h2>
+
+<br /> <br />
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td width=568 valign=top>
+<h3><font face="Verdana,Arial,Helvetica,sans-serif" color="#485ff8">
+Hex → CMYK
+</font></h3>
+<form name="cmyk"><nobr>
+    </nobr><p><nobr>HEX:<input type="text" name="hex" size="7" maxlength="7" value="FFFFFF">
+<input type="button" name="btn" value="Конвертировать" onclick="hexToCMYK(this.form.hex.value);
+         this.form.C.value=computedC.toFixed(4);
+         this.form.M.value=computedM.toFixed(4);
+         this.form.Y.value=computedY.toFixed(4);
+         this.form.K.value=computedK.toFixed(4);
+">
+
+</nobr><nobr>C:<input type="text" name="C" size="4" style="width:50px;"> M:<input type="text" name="M" size="4" style="width:50px;"> Y:<input type="text" name="Y" size="4" style="width:50px;"> K:<input type="text" name="K" size="4" style="width:50px;"></nobr></p>
+</form>
+
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td width=568>
+
+<h3><font face="Verdana,Arial,Helvetica,sans-serif" color="#485ff8">
+Hex → RGB
+</font></h3>
+
+
+<form name=rgb>
+<table border=0 cellpadding=1 cellspacing=1>
+<tr>
+<td valign=top><nobr>
+<p><small>HEX:</small>
+<input type=text name=hex size=7 maxlength=7 value="FFFFFF">
+<input type=button name=btn value="Конвертировать"
+onclick="setBgColorById('colorSample',this.form.hex.value);
+this.form.r.value=hexToR(this.form.hex.value);
+this.form.g.value=hexToG(this.form.hex.value);
+this.form.b.value=hexToB(this.form.hex.value);
+">
+R:<input type=text name=r size=3 style="width:33px;">
+G:<input type=text name=g size=3 style="width:33px;">
+B:<input type=text name=b size=3 style="width:33px;">
+</nobr>
+</p>
+</td><td>&nbsp;</td><td valign=top width=99><g:plusone size="medium"></g:plusone></td>
+</tr></table>
+</form>
+
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td width=568>
+
+<h3><font face="Verdana,Arial,Helvetica,sans-serif" color="#485ff8"
+>RGB → CMYK</font></h3>
+
+<form name=cmyk>
+
+<nobr>R:<input type=text name=R size=3 value="255" style="width:30px;"
+    > G:<input type=text name=G size=3 value="255" style="width:30px;"
+    > B:<input type=text name=B size=3 value="255" style="width:30px;"
+    ></nobr>
+
+<input type=button name=btn value="Конвертировать"
+       onClick="rgb2cmyk(this.form.R.value,this.form.G.value,this.form.B.value);
+       this.form.C.value=computedC.toFixed(4);
+       this.form.M.value=computedM.toFixed(4);
+       this.form.Y.value=computedY.toFixed(4);
+       this.form.K.value=computedK.toFixed(4);
+">
+
+<nobr>C:<input type=text name=C size=4 style="width:48px;"
+    > M:<input type=text name=M size=4 style="width:48px;"
+    > Y:<input type=text name=Y size=4 style="width:48px;"
+    > K:<input type=text name=K size=4 style="width:48px;"></nobr>
+</form>
+
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td valign=top width=566>
+
+<h3><font face="Verdana,Arial,Helvetica,sans-serif" color="#485ff8">
+RGB → Hex
+</font></h3>
+
+<form name=rgb>
+<table border=0 cellpadding=1 cellspacing=1>
+<tr>
+<td valign=top><nobr>&nbsp;
+R:<input type=text name=r size=3 maxlength=3 value=255 style="width:33px;" onfocus="this.form.hex.value=''" onblur="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);setBgColorById('colorSample',sNewColor);">
+G:<input type=text name=g size=3 maxlength=3 value=255 style="width:33px;" onfocus="this.form.hex.value=''" onblur="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);setBgColorById('colorSample',sNewColor);">
+B:<input type=text name=b size=3 maxlength=3 value=255 style="width:33px;" onfocus="this.form.hex.value=''" onblur="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);setBgColorById('colorSample',sNewColor);">
+<input type=button name=btn value="Конвертировать" onclick="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);this.form.hex.value=sNewColor;setBgColorById('colorSample',sNewColor);">
+<input type=text name=hex size=8></nobr>
+
+</td><td>&nbsp;</td><td valign=top width=99><g:plusone size="medium"></g:plusone></td>
+</tr></table>
+
+</td>
+</tr></table>
+</td>
+</tr>
+</table>
+
+
+<h3><font face="Verdana,Arial,Helvetica,sans-serif" color="#485ff8">
+RGB → HSV
+</font></h3>
+<form name=hsv>
+<nobr>R:<input type=text name=R size=3 value="255" maxlength=3 style="width:32px;"
+    > G:<input type=text name=G size=3 value="255" maxlength=3 style="width:32px;"
+    > B:<input type=text name=B size=3 value="255" maxlength=3 style="width:32px;"
+    ></nobr>
+<input type=button name=btn value="Конвертировать"
+       onClick="rgb2hsv(this.form.R.value,this.form.G.value,this.form.B.value);
+       this.form.H.value=computedH.toFixed(1);
+       this.form.S.value=computedS.toFixed(4);
+       this.form.V.value=computedV.toFixed(4);
+">
+<nobr>H:<input type=text name=H size=4 style="width:50px;"
+    > S:<input type=text name=S size=4 style="width:50px;"
+    > V:<input type=text name=V size=4 style="width:50px;"></nobr>
+</form>
+
+</converters>
+</HTML>

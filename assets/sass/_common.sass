@@ -1,0 +1,266 @@
+*
+    margin: 0
+    padding: 0
+
+body
+    font-family: $font
+    font-size: 15px
+    font-weight: 300
+    line-height: 28px
+
+.eco--btn
+    font-size: 12px
+    font-weight: 400
+    text-transform: uppercase
+    line-height: 46px
+    text-align: center
+    padding: 0 30px
+    border-radius: 30px
+    color: #ffffff
+    min-width: 190px
+    border: 2px solid #ffffff
+    box-shadow: 0 0 18px 10px rgba(0,0,0,.07)
+    @extend .trns
+    @extend .c1-bg
+    @extend .c1-bo
+    +mq(mobile)
+        line-height: 40px
+        padding: 0 25px
+        min-width: 0
+    &:hover,
+    &:active,
+    &:focus
+        color: #ffffff
+        opacity: .9
+        transform: translateY(-1px)
+    i
+        margin-left: 8px
+    &.eco--bordered--white
+        background: transparent
+        color: #ffffff
+        border-color: #ffffff !important
+        box-shadow: none
+    &.eco--bordered
+        font-weight: 700
+        background: transparent
+        @extend .c5
+        box-shadow: none
+        border-color: #dadffe !important
+        &:hover,
+        &:active,
+        &:focus
+            @extend .c5
+            opacity: .9
+            transform: translateY(0)
+        
+.eco--square
+    border-radius: 0
+    
+.eco--sec--title,
+.eco--sec--title--white
+    text-transform: uppercase
+    font-weight: 700
+    +mq(mobile)
+        text-align: center
+    > span
+        font-size: 12px
+        @extend .c5
+        margin-bottom: 20px
+        +mq(mobile)
+            margin-bottom: 15px
+    h1
+        font-size: 100px
+        line-height: 90px
+        font-weight: 900
+        +mq(mobile)
+            font-size: 50px
+            line-height: 50px
+        margin: 0
+        span
+            @extend .c1
+    &.eco--small h1
+        font-size: 60px
+        line-height: 60px
+        +mq(mobile)
+            font-size: 30px
+            line-height: 30px
+    &.eco--medium h1
+        line-height: 80px
+        font-size: 80px
+        +mq(mobile)
+            font-size: 40px
+            line-height: 40px
+        & + span
+            margin-bottom: 0
+            margin-top: 20px
+        
+        
+
+.eco--sec--title--white h1,
+.eco--sec--title--white span
+    color: #ffffff
+.eco--lowercase
+    h1
+        text-transform: lowercase
+        font-weight: 700
+        
+.eco--bg--ptrn--1,
+.eco--bg--ptrn--2
+    position: relative
+    z-index: 1
+    overflow: hidden
+    &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        z-index: -1
+        background-image: url(../img/ext/pattern-01.png)
+        background-repeat: no-repeat
+        background-position: center bottom
+        opacity: .1
+        transition: .1s
+
+.eco--bg--ptrn--2::after
+    background-image: url(../img/ext/pattern-02.png)
+    background-repeat: repeat-x
+    background-position: right bottom
+    top: auto
+    bottom: -60px
+    animation: 10s linear 0s normal none infinite running eco-bg-slide
+
++keyframe(eco-bg-slide)
+    0% 
+        background-position: right bottom
+    97% 
+        opacity: .1
+    98% 
+        opacity: 0
+        background-position: left bottom
+    99% 
+        background-position: right bottom
+    99.5%
+        opacity: 0
+    100%
+        opacity: .1
+    
+
+.eco--gradient--bg,
+.eco--animated--gradient
+    background: rgb(22,52,240)
+    background: -moz-linear-gradient(-45deg, rgba(22,52,240,1) 0%, rgba(14,223,24,1) 100%) 
+    background: -webkit-linear-gradient(-45deg, rgba(22,52,240,1) 0%,rgba(14,223,24,1) 100%) 
+    background: linear-gradient(135deg, rgba(22,52,240,1) 0%,rgba(14,223,24,1) 100%) 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1634f0', endColorstr='#0edf18',GradientType=1 )
+
+.eco--animated--gradient
+    animation: animatedGradient 10s ease infinite
+    background-size: 150%
+
++keyframe(animatedGradient)
+    0% 
+        background-position: 0% 50%
+    50% 
+        background-position: 100% 50%
+    100% 
+        background-position: 0% 50%
+    
+.eco--overlay--1
+    position: relative
+    background-size: cover
+    background-position: center
+    z-index: 1
+    &::after
+        content: ''
+        position: absolute
+        height: 100%
+        width: 100%
+        left: 0
+        top: 0
+        background-color: #1a1b1e
+        opacity: .7
+        z-index: -1
+
+        
+.eco--arrow--style--2
+    position: relative
+    +mq(tab)
+        .eco--single--slide
+            padding-right: 40px
+            padding-left: 40px
+    .eco--prev,
+    .eco--next
+        position: absolute
+        height: 40px
+        width: 40px
+        background-color: rgb(255, 255, 255)
+        @extend .c1
+        line-height: 40px
+        text-align: center
+        top: 50%
+        left: -120px
+        transform: translateY(-50%)
+        z-index: 2
+        border-radius: 3px
+        cursor: pointer
+        opacity: 0
+        @extend .trns
+        +mq(mobile)
+            display: none !important
+        +mq(maxTab)
+            left: 0
+            opacity: 1
+        &:hover
+            @extend .c1-bg
+            color: #ffffff
+    .eco--next
+        left: auto
+        right: -120px
+        +mq(maxTab)
+            right: 0
+            opacity: 1
+    &:hover
+        .eco--prev
+            left: -80px
+            opacity: 1
+            +mq(maxTab)
+                left: 0
+        .eco--next
+            right: -80px
+            opacity: 1
+            +mq(maxTab)
+                right: 0
+            
+.eco--subtitle
+    margin: 0 0 25px
+    text-transform: uppercase
+    font-weight: 700
+    font-size: 12px
+    @extend .c5
+
+.eco--arrow--wrap
+    position: relative
+    .eco--home--content--4
+        padding-bottom: 50px
+    .eco--animated--arrow
+        position: absolute
+        left: 50%
+        bottom: 45px
+        margin-left: -4px
+        animation: arrow_anim 1s ease infinite
+        
++keyframe(arrow_anim)
+    0%
+        transform: translateY(3px)
+    60%
+        transform: translateY(-3px)
+    100% 
+        transform: translateY(3px)
+
+
+
+
+
+

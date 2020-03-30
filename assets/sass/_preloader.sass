@@ -1,0 +1,29 @@
+.preloader
+    @extend .flex_center
+    height: 100%
+    width: 100%
+    z-index: 99
+    position: fixed
+    top: 0
+    left: 0
+    background: #fff
+    text-align: center
+
+.preloader-spin 
+    height: 40px
+    width: 40px
+    display: inline-block
+    background: transparent
+    border-radius: 50%
+    border-width: 3px
+    border-style: solid
+    border-color: #d0d0d0 #d0d0d0 #111111 #d0d0d0
+    animation: 1s linear 0s normal none infinite running spinner_preloader
+
+@keyframes spinner_preloader 
+    0%
+        transform: rotate(0deg)
+    50%
+        transform: rotate(360deg)
+    100%
+        transform: rotate(720deg)

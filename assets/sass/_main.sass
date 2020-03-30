@@ -1,0 +1,1006 @@
+
+
+/*
+    **************************
+        01 - header styles
+    **************************/
+.eco--header--1
+    .eco--header--top
+        border-bottom: 1px solid #ededed
+        padding: 10px 0
+    .slicknav_btn
+        +mq(mobile)
+            margin: 8px 0
+    .eco--menu--col
+        +mq(mobile)
+            background-color: #222222
+.eco--logo a
+    font-size: 20px
+    font-weight: 900
+    @extend .c4
+    line-height: 50px
+
+.eco--header--2
+    position: absolute
+    z-index: 2
+    width: 100%
+    left: 0
+    top: 20px
+    +mq(mobile)
+        top: 10px
+        .eco--logo
+            margin-bottom: 10px
+            
+    .slicknav_btn
+        +mq(mobile)
+            margin: 4px 0
+    .eco--logo
+        +mq(maxTab)
+            text-align: center
+
+             
+.eco--menu--column--1
+    text-align: right
+    +mq(maxTab)
+        .slicknav_menu
+            float: left
+            ul
+                text-align: left
+    .eco--main--menu,
+    .eco--header--btn
+        display: inline-block
+    .eco--main--menu
+        text-align: left
+        > ul > li
+            > a
+                padding: 10px 15px
+                
+.eco--white--style
+    .eco--logo a
+        color: #fff
+    .eco--main--menu > ul > li
+        > a
+            color: #ffffff
+        &.has-dropdown > a
+            &:after
+                color: #ffffff
+
+.eco--header--4
+    +mq(mobile)
+        .eco--logo,
+        .eco--right--nav
+            text-align: center
+    .eco--logo a
+        line-height: 67.5px
+    .eco--header--bottom
+        background-color: #3e404d
+    .eco--btn
+        box-shadow: none
+        &:hover
+            transform: translate(0)
+    .eco--main--menu > ul > li
+        > a
+            color: #ffffff
+            padding-top: 10px
+            padding-bottom: 10px
+        &.has-dropdown > a
+            &:after
+                color: #ffffff
+    ul > li > a:hover
+        opacity: .8
+            
+.eco--menu--col-4
+    +mq(maxTab)
+        .slicknav_menu
+            float: left
+        .slicknav_nav
+            top: 50px
+        .eco--header--btn
+            float: right
+        .slicknav_btn
+            margin: 7.5px 0
+    +mq(mobile)
+        .slicknav_btn
+            margin: 3px 0
+/*
+    ******************************
+        02 - eco--home--area
+    ******************************/
+.particle-parent
+    position: relative
+    z-index: 1
+#particles-js
+    position: absolute
+    height: 100%
+    width: 100%
+    z-index: -1
+    left: 0
+    top: 0
+.eco--home--area--1
+    background-color: transparent
+    height: 700px
+    @extend .flex_center
+    overflow: hidden
+    +mq(maxTab)
+        height: auto
+        padding-top: 50px 
+    .eco--home--content--1
+        text-transform: uppercase
+        font-weight: 700
+        +mq(maxTab)
+            text-align: center
+            a
+                margin-top: 30px
+        a
+            margin-top: 120px
+            margin-bottom: 0
+            @extend .c4
+            font-size: 12px
+            +mq(maxTab)
+                margin-top: 30px
+            i
+                font-size: 10px
+                line-height: 27px
+                height: 30px
+                border: 2px
+                border: 2px solid
+                @extend .c1
+                @extend .c4-bo
+                width: 30px
+                text-align: center
+                border-radius: 50%
+                text-indent: 2px
+                margin-right: 10px
+
+.eco--home--area--1 .container
+    position: relative
+    z-index: 1
+    .eco--home--image--1
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        z-index: -1
+        margin-right: -55px
+        +mq(maxTab)
+            position: static
+            transform: translateY(0)
+            margin-right: 0
+            height: 300px
+            text-align: center
+            img
+                max-height: 100%
+                display: inline-block
+                margin-left: -90px
+
+// home 2
+
+html,
+body,
+.site_wrap,
+.eco--home--area--2
+    height: 100%
+    min-height: 750px
+    +mq(md)
+        height: auto
+        min-height: 0
+    +mq(maxTab)
+        height: auto
+        min-height: 0
+.eco--home--area--2
+    padding: 200px 0 90px
+
+.eco--static
+    position: static
+    
+.eco--home--area--2
+    @extend .flex_center
+    position: relative
+    &:after
+        opacity: .8
+
+.eco--home--content--2
+    color: #ffffff
+    .eco--video--button
+        display: block
+        position: static
+        color: #fff
+        text-align: center
+        margin-top: 40px
+        a
+            height: 80px
+            width: 80px
+            line-height: 80px
+            text-align: center
+            background-color: #fff
+            border-radius: 50%
+            @extend .c1
+        span
+            display: block
+            text-transform: uppercase
+            font-size: 14px
+            font-weight: 700
+            margin-top: 20px
+    .eco--content
+        margin-top: 35px
+        font-size: 21px
+        opacity: .7
+        line-height: 34px
+    .eco--sec--title--white
+        > span
+            opacity: .7
+        
+.eco--home--height--1
+    +mq(maxTab)
+        height: auto !important
+
+.eco--home--area--3
+    height: 750px
+    @extend .flex_center
+    +mq(maxTab)
+        text-align: center
+        height: auto !important
+        padding-top: 150px
+.eco--home--content--3
+    color: #ffffff
+    span
+        opacity: .7
+    .eco--content
+        font-size: 16px
+        font-weight: 300
+        opacity: .7
+        line-height: 26px
+        margin-top: 30px
+        *:last-child
+            margin-bottom: 0
+        
+.eoc--home--form 
+    background-color: #2d3047
+    color: #ffffff
+    margin-left: 30px
+    padding: 30px 30px 40px
+    text-align: center
+    +mq(tab)
+        margin: 50px
+    +mq(mobile)
+        margin: 50px 0
+        padding-left: 20px
+        padding-right: 20px
+        padding-bottom: 20px
+    h3 
+        display: block
+        font-weight: 400
+        margin: 0 0 35px
+        text-align: center
+    input,
+    button
+        border: 1px solid transparent
+        border-radius: 30px
+        color: #ffffff
+        display: block
+        height: 55px
+        margin-bottom: 15px
+        width: 100%
+        @extend .c7-bg
+        @extend .trns
+        text-indent: 30px
+        &:active,
+        &:focus
+            @extend .c1-bo
+        &[type="submit"],
+        button
+            @extend .c1-bg
+            text-indent: 0
+            text-transform: uppercase
+            font-weight: 700
+            height: 60px
+
+// eco--home--area--4
+
+.eco--home--area--4,
+.eco--home--area--6
+    min-height: 750px
+    height: 100%
+    @extend .flex_center
+    +mq(maxTab)
+        height: auto
+        min-height: 0
+        padding: 120px 0 90px
+.eco--home--content--4
+    text-align: center
+    span
+        opacity: .7
+
+.eco--home--area--5
+    position: relative
+    min-height: 720px
+    z-index: 1
+    @extend .flex_center
+    +mq(maxTab)
+        min-height: auto
+        padding: 50px 0
+        text-align: center
+        .eco--ml-30
+            margin-left: 0
+        .eco--vdo--btn--wrap
+            padding: 0 0 40px
+        .eco--home--img--5
+            position: static
+    +mq(md)
+        .eco--home--img--5
+            margin-right: 10px
+    +mq(mobile)
+        .eco--home--img--5
+            display: none
+    .eco--btn--wrap
+        a.eco--btn
+            text-decoration: none
+        > a, 
+        > i
+            text-transform: uppercase
+            font-style: normal
+            font-weight: 700
+            font-size: 12px
+            @extend .c4
+            @extend .trns
+            margin-left: 5px
+            text-decoration: underline
+            &:hover
+                @extend .c5
+        > i
+            margin-left: 20px
+            color: #8589a1
+            text-decoration: none
+
+.eco--home--img--5
+    bottom: 50%
+    height: auto
+    margin-bottom: -360px
+    margin-right: 120px
+    position: absolute
+    right: 50%
+    width: auto
+    z-index: -1
+.eco--home--img--5 > img
+    max-width: none
+
+
+
+
+
+/*
+    ******************************
+        03 - eco--promo--area
+    ******************************/
+
+
+.eco--promo--1
+    .eco--sec--title--white h1
+        line-height: 78px
+        +mq(mobile)
+            line-height: 50px
+
+.eco--promo--list--1
+    list-style: none
+    margin-bottom: 0
+    li
+        font-size: 18px
+        font-weight: 400
+        &:not(:last-child)
+            margin-bottom: 15px
+        i
+            @extend .c1
+            margin-right: 15px
+
+.eco--promo--1
+    position: relative
+    overflow: hidden
+    padding-bottom: 270px
+    +mq(maxTab)
+        padding-bottom: 170px
+    +mq(mobile)
+        padding-bottom: 80px
+    .eco--promo--image--1
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        top: 100%
+        margin-top: -280px
+        +mq(maxTab)
+            margin-top: -180px
+        +mq(mobile)
+            margin-top: -80px
+
+
+
+
+.eco--promo--2
+    position: relative
+    z-index: 1
+    +mq(maxTab)
+        padding-bottom: 0
+        .eco--inner
+            text-align: center
+        .eco--ml-30
+            margin-left: 0
+    .eco--promo--image--2
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 0
+        z-index: -1
+        margin-left: -350px
+        +mq(md)
+            margin-left: -400px
+        +mq(maxTab)
+            position: static
+            transform: translateY(0) translateX(0)
+            margin-left: 0
+            text-align: center
+            img
+                max-height: 400px
+                display: inline-block
+
+
+.eco--promo--3
+    position: relative
+    overflow: hidden
+    .eco--ml-50
+        margin-left: 0
+    .eco--inner
+        color: #ffffff
+        +mq(mobile)
+            text-align: center
+            .eco--mt70
+                margin-top: 30px
+    .eco--promo--image--3
+        height: 100%
+        width: auto
+        position: absolute
+        top: 0
+        right: 50%
+        margin-right: 130px
+        +mq(md)
+            margin-right: 160px
+        +mq(maxTab)
+            display: none
+        img
+            height: 100%
+            width: auto
+            max-height: none
+            max-width: none
+
+
+/*
+    ******************************
+        04 - eco--review--area
+    ******************************/
+
+.eco--review--slider--1
+    padding: 0 100px
+    +mq(mobile)
+        padding: 0
+    &::before
+        content: '“'
+        position: absolute
+        left: 10px
+        font-size: 100px
+        @extend .c1
+        font-weight: 900
+        top: 20px
+        +mq(mobile)
+            display: none
+    .slick-arrow
+        color: #fff
+        position: absolute
+        right: 30px
+        top: 50%
+        height: 40px
+        width: 40px
+        background-color: rgba(0, 0, 0, 0.2)
+        text-align: center
+        line-height: 40px
+        margin: 5px
+        cursor: pointer
+        border-radius: 3px
+        opacity: 0
+        @extend .trns
+        +mq(mobile)
+            display: none !important
+        &:hover
+            @extend .c1-bg
+        &.eco--next
+            transform: translateY(30px)
+        &.eco--prev
+            top: auto
+            bottom: 50%
+            transform: translateY(-30px)
+    &:hover .slick-arrow
+        opacity: 1
+        &.eco--prev,
+        &.eco--next
+            transform: translateY(0)
+    .eco--single--slide
+        h3
+            color: #ffffff
+            font-weight: 300
+            line-height: 36px
+            margin: 0
+            +mq(mobile)
+                line-height: 24px
+                font-size: 18px
+                text-align: center
+
+            
+.eco--review--slider--2
+    .eco--single--slide
+        text-align: center
+        color: #ffffff
+        .eco--inner
+            font-weight: 300
+            line-height: 28px
+            .eco--quote
+                font-size: 60px
+                @extend .c1
+                margin: 0 0 15px
+                line-height: 40px
+            .eco--review
+                @extend .c3
+                margin-top: 30px
+            h5
+                font-size: 14px
+                margin: 0
+                font-weight: 700
+                margin-top: 10px
+                text-transform: uppercase
+
+
+/*
+    ******************************
+        05 - eco--feature--area
+    ******************************/
+
+.eco--feature--area--1
+    position: relative
+    z-index: 1
+    overflow: hidden
+    .eco--feature--image--1
+        position: absolute
+        z-index: -1
+        left: 50%
+        top: 50%
+        transform: translateY(-50%) translateX(120px)
+        +mq(maxTab)
+            display: none
+        img
+            max-width: none
+.eco--single--feature--1
+    position: relative
+    padding-left: 80px
+    font-size: 15px
+    font-weight: 300
+    line-height: 28px
+    +mq(mobile)
+        padding-left: 60px
+    &:not(:last-child)
+        margin-bottom: 45px
+    span.eco--feature--left
+        position: absolute
+        top: 0
+        left: 0
+        text-transform: uppercase
+        font-weight: 900
+        @extend .c1
+        font-size: 30px
+    h3
+        font-weight: 600
+        margin: 0 0 25px
+
+/*
+    ******************************
+     06 - eco--specification--list
+    ******************************/
+
+.eco--specification--list--1
+    margin-bottom: 0
+    +mq(mobile)
+        margin-top: 50px
+    li
+        display: block
+        background-color: #f4f4f4
+        position: relative
+        font-size: 12px
+        font-weight: 600
+        padding: 25px 0
+        line-height: 24px
+        +mq(mobile)
+            padding: 0
+        &:not(:last-child)
+            margin-bottom: 4px
+        .eco--title
+            @extend .c1-bg
+            transition-duration: .1s
+            width: 270px
+            position: absolute
+            left: 0
+            top: 0
+            height: 100%
+            text-transform: uppercase
+            color: #fff
+            letter-spacing: 1.6px
+            border-right: 4px solid #ffffff
+            padding: 0 25px
+            @extend .flex_center
+            +mq(maxTab)
+                width: 245px
+            +mq(mobile)
+                position: static
+                width: 100%
+                padding: 15px 25px
+                margin-bottom: 15px
+        .eco--desc
+            padding-left: 295px
+            padding-right: 70px
+            font-size: 14px
+            transition-duration: .1s
+            +mq(maxTab)
+                padding-left: 260px
+            +mq(mobile)
+                padding: 0 25px 15px
+
+/*
+    ******************************
+     07 - eco--vidoe--area
+    ******************************/
+
+
+// .eco--video--area--1
+
+.eco--btn--wrap
+    span
+        color: #fff
+        font-weight: 700
+        text-transform: uppercase
+        display: block
+        font-size: 12px
+        margin-top: 25px
+        
+.eco--video--btn--1,
+.eco--video--btn--2,
+.eco--video--btn--3
+    height: 85px
+    width: 85px
+    line-height: 85px
+    border-radius: 50%
+    text-align: center
+    text-indent: 2px
+    color: #ffffff
+    font-size: 21px
+    @extend .trns
+    position: relative
+    &::after
+        border-radius: 50%
+        content: ''
+        position: absolute
+        height: 100%
+        width: 100%
+        left: 0
+        top: 0
+        background: transparent
+        border-style: solid
+        border-width: 2px
+        @extend .c1-bo
+        @extend .trns
+        animation: .4s linear 0s normal none infinite running eco--spin
+    &:hover, &:focus, &:active
+        color: #ffffff
+        &::after
+            border-right-color: $c2 !important
+            border-top-color: $c2 !important
+
++keyframe(eco--spin)
+    100%
+        transform: rotate(360deg)
+
+.eco--video--btn--2,
+.eco--video--btn--3
+    height: 80px
+    width: 80px
+    line-height: 80px
+    &::after
+        opacity: .3
+    &:hover, &:focus, &:active
+        color: #ffffff
+        &::after
+            opacity: .6
+
+.eco--video--btn--3
+    &::after
+        opacity: .2
+        border-color: #ffffff !important
+    &:hover, &:focus, &:active
+        &::after
+            opacity: .3
+            border-color: #ffffff !important
+
+.eco--video--button--5
+    text-transform: uppercase
+    font-size: 12px
+    font-weight: 700
+    a
+        @extend .c4
+        @extend .trns
+    &:hover a
+        @extend .c1
+    i
+        @extend .trns
+        @extend .c1
+        @extend .c4-bo
+        border: 2px solid
+        border-radius: 50%
+        font-size: 10px
+        height: 30px
+        line-height: 27px
+        margin-right: 10px
+        text-align: center
+        text-indent: 2px
+        width: 30px
+    &:hover i
+        @extend .c1-bo
+        
+.eco--video--area--1 .eco--mt120
+    margin-top: 40px
+/*
+    ******************************
+     08 - eco--pricing--area
+    ******************************/
+
+.eco--pricing--wrap--1
+    overflow: hidden
+    position: relative
+    .eco--pricing--main--wrap
+        overflow: hidden
+        ul.eco--single--pricing--1
+            float: left
+            width: 240px
+            margin-bottom: 0
+            list-style: none
+            box-sizing: border-box
+            display: inline-table
+            vertical-align: middle
+            +mq(md)
+                width: 25%
+                display: inline-block
+            +mq(maxTab)
+                width: 50%
+            +mq(mobile)
+                width: 100%
+            &.eco--pricing--overview
+                width: 180px
+                li
+                    border: none !important
+                    text-transform: uppercase
+                    font-weight: 700
+                    font-size: 12px
+                    &:first-child
+                        opacity: 0
+                        visibility: hidden
+                +mq(md)
+                    display: none
+            li
+                padding: 0 25px
+                text-align: center
+                font-size: 14px
+                font-weight: 400
+                line-height: 22px
+                height: 88px
+                @extend .flex_center
+                &:first-child
+                    height: auto
+                    padding-top: 30px
+                    padding-bottom: 30px
+                +mq(lg)
+                    strong
+                        display: none
+                span
+                    display: block
+                    font-size: 24px
+                    font-weight: 700
+                    margin-top: 5px
+                &:nth-child(2)
+                    text-transform: uppercase
+                    font-weight: 700
+                &:nth-child(even)
+                    background-color: #f4f4f4
+                &:not(:first-child):not(:last-child)
+                    border-left: 1px solid #eaeaea
+    
+/*
+    ******************************
+     09 - eco--faq--area
+    ******************************/
+.eco--faq--area--1
+    .eco--pr50
+        +mq(mobile)
+            padding-right: 0
+    
+.eco--single--faq
+    line-height: 28px
+    margin-bottom: 40px
+    font-size: 15px
+    &:last-of-type
+        margin-bottom: 30px
+    h4
+        font-size: 16px
+        line-height: 28px
+        margin: 0 0 25px
+        font-weight: 700
+        &::before
+            content: 'Q.'
+            @extend .c1
+            margin-right: 5px
+.eco--more--faq
+    font-weight: 700
+    text-decoration: underline
+    text-transform: uppercase
+    @extend .c1
+    font-size: 12px
+    @extend .trns
+    &:hover
+        @extend .c1
+        opacity: .8
+        text-decoration: underline
+
+.eco--brand--slider--1
+    .eco--single--slide
+        text-align: center
+        +mq(mobile)
+            margin: 0 20px
+        img
+            display: inline-block
+
+/*
+    ******************************
+     10 - eco--newsletter--area
+    ******************************/
+
+.eco--newsletter--1
+    position: relative
+    text-align: center
+    .eco--btm--txt
+        color: #fff
+        font-weight: 300
+        opacity: .6
+        margin-top: 20px
+    .eco--inner
+        width: 675px
+        position: relative
+        display: inline-block
+        +mq(mobile)
+            width: 100%
+        input
+            width: 100%
+            height: 75px
+            border-radius: 40px
+            border: 1px solid
+            @extend .c1-bo
+            text-indent: 40px
+            font-weight: 700
+            font-size: 12px
+            text-transform: uppercase
+            background-color: rgba(0, 0, 0, 0.15)
+            color: #ffffff
+            &::-webkit-input-placeholder 
+                color: #ffffff
+                opacity: .6
+            &::-moz-placeholder
+                color: #ffffff
+                opacity: .6
+            &:-ms-input-placeholder 
+                color: #ffffff
+                opacity: .6
+            &:-moz-placeholder 
+                color: #ffffff
+                opacity: .6
+
+        button
+            position: absolute
+            height: 57px
+            right: 9px
+            border-radius: 40px
+            top: 9px
+            background-color: #fff
+            border: none
+            text-transform: uppercase
+            font-size: 14px
+            font-weight: 900
+            @extend .c5
+            padding: 0 30px
+            width: 280px
+            text-align: center
+            +mq(mobile)
+                position: static
+                margin-top: 10px
+                width: auto
+    
+/*
+    ******************************
+     11 - eco--footer
+    ******************************/
+
+.widget.footer_widget
+    text-align: center
+    font-size: 14px
+    line-height: 28px
+    .eco--inner
+        display: inline-block
+        text-align: left
+        +mq(mobile)
+            display: block
+            margin-top: 15px
+        h4
+            font-weight: 900
+            margin: 0 0 15px
+            text-transform: uppercase
+        ul
+            list-style: none
+            li, 
+            li a
+                font-size: 12px
+                font-weight: 700
+                text-transform: uppercase
+                @extend .c5
+                @extend .trns
+            a:hover
+                @extend .c4
+    
+    
+    
+/*
+    ******************************
+     12 - preview-area
+    ******************************/
+
+.preview_area
+    min-height: 700px
+    @extend .flex_center
+    padding-top: 80px
+    h1
+        text-transform: lowercase
+        line-height: 110px
+        +mq(mobile)
+            line-height: 60px
+    .eco--btn
+        color: #ffffff
+        +mq(mobile)
+            //margin: 5px
+            font-size: 10px
+            padding: 0 20px
+        &:hover,
+        &:active,
+        &:focus
+            color: #ffffff
+            transform: translateY(-1px)
+    
+.single_portfolio .inner
+    margin: 30px 0
+    .portfolio_img
+        border-radius: 10px
+        overflow: hidden
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1)
+        transition-duration: .1s
+        &:hover
+            transform: translateY(-3px)
+    .h3
+        font-size: 22px
+        text-align: center
+        display: block
+        font-weight: 700
+        @extend .c4
+        @extend .trns
+        margin: 15px 0 30px
+        text-transform: uppercase
+        &:hover
+            @extend .c1
+#portfolio_preview
+    border-bottom: 1px solid #e8e8e8

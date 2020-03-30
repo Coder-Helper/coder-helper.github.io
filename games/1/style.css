@@ -1,0 +1,298 @@
+body {
+    position: fixed;
+    /*background-color: grey;*/
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    background-color: #238C20;
+}
+
+.topbox{
+    overflow: auto;
+    position: relative;
+    /*background-color: blue;*/
+    width: 100vw;
+    height: 10vh;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    border-bottom: none;
+    background-color: #238C20;
+    
+}
+
+.options{
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+    background-color: #238C20;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom: none;
+}
+
+button{
+    background-color: white;
+    position: relative;
+    text-align: center;
+    border-color: white;
+    color: white;
+    font-size: 12px;
+    left: 0;
+    display: block;
+    width: 30vw;
+}
+
+.underbox button{
+    color: black;
+    height: 8vh;
+    width: 35vw;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.changebet button{
+    width: 18vw;
+    height: 5vh;
+    margin: 0 auto;
+    color: white;
+    background-color: #238C20;
+}
+
+
+#blackbtn{
+    background-color: black;
+}
+#greenbtn{
+    background-color: #05AC54;
+}
+#redbtn{
+    background-color: red;
+}
+
+.choices button{
+    
+    height: 50px;
+}
+
+canvas#recent10{
+    background-color: white;
+}
+
+.recents td{
+    /*background-color: grey;*/
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.recentsbox{
+    background-color: #238C20;
+    height: 15vh;
+    width: 100vw;
+    overflow: auto;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom: none;
+}
+.recentsbox h2{
+    top: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.underbox{
+    background-color: #238C20;
+    position: relative;
+    height: 45vh;
+    width: 100vw;
+    bottom: 0;
+    margin: 0;
+    overflow: auto;
+    border: 1px solid black;
+    border-top: none;
+}
+
+.underbox button{
+    margin-left: 32.5vw;
+    margin-right: 32.5vw;
+    font-size: 20px;
+}
+
+.underbox h1{
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 0;
+    font-size: 35px;
+}
+
+
+#instructions{
+    position: absolute;
+    width: 90vw;
+    height: 90vh;
+    top: 0;
+    background-color: black;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border: 2px dotted black;
+    color:white;
+}
+
+#instructions h1{
+    background-color: black;
+    margin-left: 15px;
+    color: white;
+    font-family: cursive;
+}
+
+#instructions li{
+    background-color: black;
+    margin-left: 15px;
+    color: white;
+    font-weight: 900;
+}
+
+ol, ul{
+    background-color: black;
+}
+
+#closeBtn{
+    margin: 0;
+    position: relative;
+    border-radius: 50%;
+    background-color: black;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    top: -15px;
+    left: -15px;
+    border: 2px dotted black;
+    color: white;
+}
+
+#recents p{
+    color: #238C20;
+}
+
+#recents {
+    text-align: center;
+    border: 2px solid black;
+}
+
+#wheel {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    height: 15vh;
+    
+    -webkit-animation: mymove 3s forwards;
+    -webkit-animation-timing-function: linear; 
+    animation: mymove 3s forwards;
+    animation-delay: .5s;
+    animation-timing-function: ease-in-out;
+    background-color: white;
+}
+
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: -9340px;}
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: -9340px;}
+}
+
+
+
+.slotsbar{
+    position: relative;
+    height: 20vh;
+    width: 12000px;
+    background-color: white;
+    top: 40vh;
+    z-index: 2;
+}
+
+.slots{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+.slots td{
+    background-color: blue;
+    height: 100%;
+    width: 25vw;
+    color: white;
+    border: 0px solid gold;
+}
+
+
+
+.slots h1{
+    background-color: blue;
+}
+
+
+#wheelback{
+    position: absolute;
+    background-color: #238C20;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;    
+}
+
+#wheelback h1{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-top: 30vh;
+}
+
+#wheelback h2{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+#rulesbtn{
+    position: absolute;
+    margin: 0;
+    border: 2px solid white;
+    background-color: #238C20;
+    color: white;
+    bottom: 25px;
+    left: 25px;
+}
+
+#betbtn{
+    width: 50vw;
+    height: 10vh;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    background-color: #238C20;
+    color: white;
+    border: 2px solid white;
+}
+
+#allinbtn{
+    width: 20vw;
+    top: 0;
+    margin-left: 40vw;
+    margin-right: 40vw;
+    margin: 0;
+    vertical-align: center;
+}

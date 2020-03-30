@@ -1,0 +1,17 @@
+- var blocks = 94;
+
+.container
+  - var d = 6;
+  - while (d--) {
+    .digit
+  - }
+  .surface
+    - for (var b = 1;b <= blocks;++b) {
+      div(class="block b" + b)
+        .block-outer
+          .block-inner
+            .bottom
+            .front
+            .left
+            .right
+    - }

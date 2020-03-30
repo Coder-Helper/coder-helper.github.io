@@ -1,0 +1,139 @@
+nav.eco--main--menu
+    position: relative
+    +mq(maxTab)
+        display: none !important
+    ul
+        margin: 0
+        padding: 0
+        list-style: none
+        li
+            display: inline-block
+            position: relative
+            &:not(:nth-child(1))
+                margin-left: -4px
+            &:first-child
+                margin-left: -15px
+            a
+                padding: 20px 15px
+                font-size: 12px
+                @extend .trns
+                @extend .c4
+                font-weight: 700
+                text-transform: uppercase
+                +mq(md)
+                    font-size: 14px
+            &.current-menu-item > a,
+            &:hover > a
+                background-color: transparent
+            &:hover > ul
+                opacity: 1
+                visibility: visible
+            &.has-dropdown
+                > a
+                    @extend .trns
+                    padding-right: 30px
+                    &:after
+                        content: '\f105'
+                        margin-left: 8px
+                        position: absolute
+                        right: 15px
+                        font-family: $fa
+                        @extend .trns
+                        @extend .c4
+                &:hover > a
+                    &:after
+                        transform: rotate(90deg)
+                li.has-dropdown a
+                    &:after
+                        color: #8c8c8c
+                    &:hover:after,
+                    &:active:after
+                        color: #333
+            ul
+                position: absolute
+                z-index: 2
+                top: 100%
+                left: 0
+                min-width: 200px
+                background-color: #fff
+                padding: 10px 0
+                box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.08)
+                opacity: 0
+                @extend .trns
+                visibility: hidden
+                border-radius: 5px
+                li
+                    display: block
+                    margin-left: 0!important
+                    a
+                        display: block
+                        width: 100%
+                        padding: 6px 28px
+                        font-size: 11px
+                        opacity: .9
+
+                    &.current-menu-item > a,
+                    &:hover > a
+                        background-color: rgba(0, 0, 0, .04)
+                        text-indent: 5px
+                    ul
+                        left: 100%
+                        margin-left: -10px
+                        top: 10px
+                        li
+                            ul
+                                left: auto
+                                right: 100%
+                                margin-right: 0
+                                margin-right: -10px
+
+
+.eco--header--1 .slicknav_menu 
+    text-align: right
+
+.eco--header--1 .slicknav_nav 
+    left: auto
+    right: 15px
+    text-align: left
+    top: 51px
+    
+.eco--header--1 .eco--main--menu > ul > li > a::before 
+    @extend .c1-bg
+    content: ""
+    height: 2px
+    position: absolute
+    top: 0
+    width: 0
+    @extend .trns
+.eco--header--1 .eco--main--menu > ul > li > a:hover::before
+    width: 40px
+
+// navigation 2
+
+nav.eco--right--nav
+    text-align: right
+    ul
+        display: inline-block
+        text-align: left
+        margin: 0
+        padding: 0
+        list-style: none
+        li
+            display: inline-block
+            position: relative
+            &:not(:nth-child(1))
+                margin-left: -4px
+            &:last-child
+                margin-right: -15px
+            a
+                padding: 20px 15px
+                font-size: 12px
+                @extend .trns
+                @extend .c4
+                font-weight: 700
+                text-transform: uppercase
+                +mq(md)
+                    font-size: 14px
+            &.current-menu-item > a,
+            &:hover > a
+                background-color: transparent

@@ -1,0 +1,407 @@
+// container and surface
+$sqSize: 20px;
+$xSpaces: 27;
+$ySpaces: 1;
+$zSpaces: 5;
+$contW: ($sqSize * $xSpaces) * 1.1;
+$contH: $sqSize * $zSpaces * 2;
+$xAngle: 105deg;
+$zAngle: 0deg;
+$prsp: 800px;
+
+// colors
+$tr: transparent;
+$bl: #000;
+$gry: #444;
+$grn: #74d447;
+
+// animation, transitions
+$dur: 2s;
+$tf: cubic-bezier(.4,.1,.6,.9);
+$trans: 0.3s;
+$bounce: 10px;
+$tilt: 7deg;
+
+// * Block placement *
+// parameters: x-pos,z-pos
+$blocks:
+  // * Hour *
+  // tens
+  (1,5) (2,5) (3,5)
+  (1,4) (2,4) (3,4)
+  (1,3) (2,3) (3,3)
+  (1,2) (2,2) (3,2)
+  (1,1) (2,1) (3,1)
+  // ones
+  (5,5) (6,5) (7,5)
+  (5,4) (6,4) (7,4)
+  (5,3) (6,3) (7,3)
+  (5,2) (6,2) (7,2)
+  (5,1) (6,1) (7,1)
+  // colon
+  (9,4)
+  (9,2)
+  // * Minute *
+  // tens
+  (11,5) (12,5) (13,5)
+  (11,4) (12,4) (13,4)
+  (11,3) (12,3) (13,3)
+  (11,2) (12,2) (13,2)
+  (11,1) (12,1) (13,1)
+  // ones
+  (15,5) (16,5) (17,5)
+  (15,4) (16,4) (17,4)
+  (15,3) (16,3) (17,3)
+  (15,2) (16,2) (17,2)
+  (15,1) (16,1) (17,1)
+  // colon
+  (19,4)
+  (19,2)
+  // * Second *
+  // tens
+  (21,5) (22,5) (23,5)
+  (21,4) (22,4) (23,4)
+  (21,3) (22,3) (23,3)
+  (21,2) (22,2) (23,2)
+  (21,1) (22,1) (23,1)
+  // ones
+  (25,5) (26,5) (27,5)
+  (25,4) (26,4) (27,4)
+  (25,3) (26,3) (27,3)
+  (25,2) (26,2) (27,2)
+  (25,1) (26,1) (27,1);
+
+@mixin placeBlock($x, $z) {
+  $w: 0.8; // block width
+  $d: $w;
+  $h: $w;
+  $g: (1 - $w) / 2; // half gap between blocks
+  $x: $x + $g;
+  $y: 1 + $g;
+  $z: $z + $g;
+  transform: translate3d(
+    $sqSize*($x - 1),
+    $sqSize*(-$y - ($d - 1)),
+    ($sqSize*$z) + ($sqSize*($h - 1))
+  );
+  .block-inner div {
+    &.top, &.bottom {
+      width: $sqSize * $w;
+      height: $sqSize * $d;
+    }
+    &.top  {
+      transform: rotateX(-90deg) translateY(-$sqSize*($d - 1));
+    }
+    &.bottom {
+      transform: rotateX(-90deg) translateY(-$sqSize*($d - 1)) translateZ($sqSize*$h);
+    }
+    &.front, &.back {
+      width: $sqSize * $w;
+      height: $sqSize * $h;
+    }
+    &.front {
+      transform: translateZ($sqSize * ($d - 1));
+    }
+    &.left, &.right {
+      width: $sqSize * $d;
+      height: $sqSize * $h;
+    }
+    &.right {
+      transform: rotateY(-270deg) translate3d($sqSize, 0, $sqSize*($w - $d));
+    }
+  }
+}
+@mixin moveBlock($x, $z) {
+  transform: translate3d($sqSize * $x,0,$sqSize * $z);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background:
+    radial-gradient(circle at center,$tr, $bl 95%),
+    linear-gradient($gry 2px, $tr 0) 0 0 / 20px 20px,
+    linear-gradient(90deg, $gry 2px, $bl 0) 0 0 / 20px 20px;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+.container, .surface, .block, .block-outer, .block-inner {
+	transform-style: preserve-3d;
+}
+.container, .block, .digit {
+  position: absolute;
+}
+.container {
+  animation: bounce $dur $tf infinite;
+  display: flex;
+  margin: auto;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: $contW;
+  height: $contH;
+  perspective: $prsp;
+}
+.surface {
+  animation: tilt $dur (-$dur*0.75) $tf infinite;
+  display: block;
+  width: $sqSize * $xSpaces;
+  height: $sqSize * $ySpaces;
+  margin: auto;
+  transform: translateY($sqSize * $zSpaces/2) rotateX($xAngle) rotateZ($zAngle);
+  will-change: transform;
+}
+.block {
+  bottom: 0;
+}
+.block-inner {
+  div {
+      background-color: $grn;
+  }
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: absolute;
+    width: $sqSize;
+    height: $sqSize;
+    &.top, &.bottom, &.left, &.right {
+      &:before {
+        background-color: #000;
+        content: "";
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &.top, &.bottom {
+      &:before {
+        opacity: 0.2;
+      }
+    }
+    &.left, &.right {
+      &:before {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+.block-outer, .block-inner {
+  position: relative;
+  width: $sqSize;
+}
+.block-outer {
+  transition: transform $trans;
+}
+.block-inner {
+  transform: rotateX(-90deg) translateZ($sqSize);
+}
+.back {
+  transform: translateZ(-$sqSize) rotateY(180deg);
+}
+.left {
+  transform-origin: center left;
+  transform: rotateY(270deg) translateX(-$sqSize);
+}
+.right {
+  transform-origin: top right;
+}
+.top, .bottom {
+  transform-origin: top center;
+}
+
+// * Render blocks *
+// one block only
+@if length(nth($blocks,1)) == 1 {
+  .b1 {
+      @include placeBlock(
+        nth($blocks, 1),
+        nth($blocks, 2)
+      );
+    }
+}
+// more than one block
+@else {
+  @for $b from 1 through length($blocks) {
+    .b#{$b} {
+      @include placeBlock(
+        nth(nth($blocks, $b), 1),
+        nth(nth($blocks, $b), 2)
+      );
+    }
+  }
+}
+
+// * Digit display *
+@for $p from 1 through 6 {
+  $step: 15 * ($p - 1);
+  // deal with colons
+  $adj: if($p > 4,4,if($p > 2,2,0));
+  $step: $step + $adj;
+  ._0:nth-of-type(#{$p}) ~ .surface {
+    .b#{5 + $step}, .b#{8 + $step}, .b#{11 + $step} {
+      .block-outer {
+        @include moveBlock(-1,0)
+      }
+    }
+  }
+  ._1:nth-of-type(#{$p}) ~ .surface {
+    .b#{1 + $step}, .b#{4 + $step}, .b#{7 + $step}, .b#{10 + $step}, .b#{13 + $step} {
+      .block-outer {
+        @include moveBlock(2,0)
+      }
+    }
+    .b#{2 + $step}, .b#{5 + $step}, .b#{8 + $step}, .b#{11 + $step}, .b#{14 + $step} {
+      .block-outer {
+        @include moveBlock(1,0)
+      }
+    }
+  }
+  ._2:nth-of-type(#{$p}) ~ .surface {
+    .b#{4 + $step} {
+      .block-outer {
+        @include moveBlock(2,0)
+      }
+    }
+    .b#{5 + $step} {
+      .block-outer {
+        @include moveBlock(1,0)
+      }
+    }
+    .b#{11 + $step} {
+      .block-outer {
+        @include moveBlock(-1,0)
+      }
+    }
+    .b#{12 + $step} {
+      .block-outer {
+        @include moveBlock(-2,0)
+      }
+    }
+  }
+  @if $p > 1 {
+    ._3:nth-of-type(#{$p}) ~ .surface {
+      .b#{4 + $step}, .b#{10 + $step} {
+        .block-outer {
+          @include moveBlock(2,0)
+        }
+      }
+      .b#{5 + $step}, .b#{11 + $step} {
+        .block-outer {
+          @include moveBlock(1,0)
+        }
+      }
+    }
+    ._4:nth-of-type(#{$p}) ~ .surface {
+      .b#{2 + $step}, .b#{5 + $step} {
+        .block-outer {
+          @include moveBlock(-1,0)
+            }
+      }
+      .b#{10 + $step}, .b#{13 + $step} {
+        .block-outer {
+          @include moveBlock(2,0)
+            }
+      }
+      .b#{11 + $step}, .b#{14 + $step} {
+        .block-outer {
+          @include moveBlock(1,0)
+            }
+      }
+    }
+    ._5:nth-of-type(#{$p}) ~ .surface {
+      .b#{5 + $step} {
+        .block-outer {
+          @include moveBlock(-1,0)
+            }
+      }
+      .b#{6 + $step} {
+        .block-outer {
+          @include moveBlock(-2,0)
+            }
+      }
+      .b#{10 + $step} {
+        .block-outer {
+          @include moveBlock(2,0)
+            }
+      }
+      .b#{11 + $step} {
+        .block-outer {
+          @include moveBlock(1,0)
+            }
+      }
+    }
+    @if $p % 2 == 0 {
+      ._6:nth-of-type(#{$p}) ~ .surface {
+        .b#{5 + $step} {
+          .block-outer {
+            @include moveBlock(-1,0)
+              }
+        }
+        .b#{6 + $step} {
+          .block-outer {
+            @include moveBlock(-2,0)
+              }
+        }
+        .b#{11 + $step} {
+          .block-outer {
+            @include moveBlock(1,0)
+              }
+        }
+      }
+      ._7:nth-of-type(#{$p}) ~ .surface {
+        .b#{4 + $step}, .b#{7 + $step}, .b#{10 + $step}, .b#{13 + $step} {
+          .block-outer {
+            @include moveBlock(2,0)
+              }
+        }
+        .b#{5 + $step}, .b#{8 + $step}, .b#{11 + $step}, .b#{14 + $step} {
+          .block-outer {
+            @include moveBlock(1,0)
+              }
+        }
+      }
+      ._8:nth-of-type(#{$p}) ~ .surface {
+        .b#{5 + $step}, .b#{11 + $step} {
+          .block-outer {
+            @include moveBlock(1,0)
+              }
+        }
+      }
+      ._9:nth-of-type(#{$p}) ~ .surface {
+        .b#{5 + $step}, .b#{11 + $step} {
+          .block-outer {
+            @include moveBlock(1,0)
+              }
+        }
+        .b#{10 + $step} {
+          .block-outer {
+            @include moveBlock(2,0)
+              }
+        }
+      }
+    }
+  }
+}
+/* Animations */
+@keyframes bounce {
+  from, 50%, to {
+    transform: translateY(0);
+  }
+  25%, 75% {
+    transform: translateY($bounce);
+  }
+}
+@keyframes tilt {
+  from, to {
+    transform: translateY($sqSize * $zSpaces/2) rotateX($xAngle) rotateZ(-$tilt);
+  }
+  50% {
+    transform: translateY($sqSize * $zSpaces/2) rotateX($xAngle) rotateZ($tilt);
+  }
+}
