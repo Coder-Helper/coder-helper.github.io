@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Цвет-HEX | Coder Helper</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="shortcut icon" href="/../img/icon.png" type="image/x-icon">
-  </head>
-  <body>
-  <h2 class="CoderHelper"><a href="/../index.html"><img style="max-width: 30% " src="/../img/Logo2.png"></a></h2>
-  <div class="btn"><i class="fas fa-cog"></i></div>
-  <div class="box">
-    <h3 align="center">Панель Управления</h3>
-    <h2>Введите цвет (HEX)</h2>
-    <div class="box-c">
-      <div class="txtb">
-        <input type="text" placeholder="#000000" id="hex">
-        <div class="prev"></div>
-      </div>
-      <button class="apply">Выполнить</button>
-    </div>
-    <p align="center">(C)Coder Helper, by Azer Sadykhzadeh</p>
-  </div>
 
+<head>
+		<meta charset="utf-8">
+		<title>Цвет-HEX | Coder Helper</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="shortcut icon" href="/../img/icon.png" type="image/x-icon">
+</head>
 
-<script type="text/javascript">
-  //to show and hide the box
-  $('.btn').click(function(){
-    $(".box").toggleClass("box-show");
-  });
+<body>
+		<h2 class="CoderHelper"><a href="/../index.html"><img style="max-width: 30% " src="/../img/Logo2.png"></a></h2>
+		<div class="btn"><i class="fas fa-cog"></i></div>
+		<div class="box">
+				<h3 align="center">Панель Управления</h3>
+				<h2>Введите цвет (HEX)</h2>
+				<div class="box-c">
+						<div class="txtb">
+								<input type="text" placeholder="#000000" id="hex">
+								<div class="prev"></div>
+						</div>
+						<button class="apply">Выполнить</button>
+				</div>
+				<p align="center">(C)Coder Helper, by Azer Sadykhzadeh</p>
+		</div>
 
-  //to have a preview of color
-  $('#hex').keyup(function(){
-    $('.prev').css("background",$('#hex').val());
-  });
+		<script type="text/javascript">
+				//to show and hide the box
+				$('.btn').click(function() {
+						$(".box").toggleClass("box-show");
+				});
 
-  //to apply color
-  $('.apply').click(function(){
-    $('body').css("background",$('#hex').val());
-    //to hide the box after aplying the color
-      $(".box").toggleClass("box-show");
-  })
+				//to have a preview of color
+				$('#hex').keyup(function() {
+						$('.prev').css("background", $('#hex').val());
+				});
 
-</script>
+				//to apply color
+				$('.apply').click(function() {
+						$('body').css("background", $('#hex').val());
+						//to hide the box after aplying the color
+						$(".box").toggleClass("box-show");
+				})
+		</script>
 
-  </body>
+</body>
+
 </html>
