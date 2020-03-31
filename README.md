@@ -7,4 +7,4 @@ The main objective of the project is to combine useful tools for the programmer,
 *The code has NOT been polished and is provided "as is". There are a lot of code that are redundant and there are tons of improvements that can be made.*
 
 ## Author
-(C) 2020 [Azer Sadykhzadeh](https://github.com/sadykhzadeh).
+(C) 2020 Coder Helper Organization, by [Azer Sadykhzadeh](https://github.com/sadykhzadeh).
