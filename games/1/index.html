@@ -1,106 +1,130 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="shortcut icon" href="/../img/icon.png" type="image/x-icon">
-		<title>Испытай удачу! | Coder Helper</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body onload="onLoad()">
-	<div class="topbox">
-	<h1 id="money">Ваш баланс: </h1>
-	</div>
-	
-	<div class="recentsbox">
-	<h2 id="result">Результаты: </h2>
-	<table class="recents">
-	<tr id="recents">
-	<td id="c0"><p>##</p></td>
-	<td id="c1"><p>##</p></td>
-	<td id="c2"><p>##</p></td>
-	<td id="c3"><p>##</p></td>
-	<td id="c4"><p>##</p></td>
-	<td id="c5"><p>##</p></td>
-	<td id="c6"><p>##</p></td>
-	<td id="c7"><p>##</p></td>
-	<td id="c8"><p>##</p></td>
-	<td id="c9"><p>##</p></td>
-	</tr>
-	</table>
-	</div>
-	<div class="options">
-	<table align="center">
-	<tr class="changebet">
-	
-		<td><button onclick="changeBet(1)">+1$</button></td>
-		<td><button onclick="changeBet(10)">+$10</button></td>
-		<td><button onclick="changeBet(100)">+$100</button></td>
-	</tr>
-	<tr class="changebet">
-		<td><button onclick="changeBet(-1)">-1$</button></td>
-		<td><button onclick="changeBet(-10)">-$10</button></td>
-		<td><button onclick="changeBet(-100)">-$100</button></td>
-	</tr>
-	
-	<tr class="choices">
-	
-		<td><button id="redbtn" onclick="choose('red')">Красный</button></td>
-		<td><button id="greenbtn" onclick="choose('green')">Зелёный</button></td>
-		<td><button id="blackbtn" onclick="choose('black')">Черный</button></td>
-	</tr>
-	
-	<tr>
-	<tr class="changebet">
-		<td></td>
-		<td><button onclick="allin()">ALL IN</button></td>
-		<td></td>
-	</tr>
-	</table>
-	</div>
-	
-	<div class="underbox">
-	<!--button id="allinbtn" onclick="allin()">All In</button-->
-	<h1 id="wager">Bet: </h1>
-	<!--h2 id="choice">Choice: </h2-->
-	<button id="betbtn" onclick="placeBet()">Крути!</button>
-	<button id="rulesbtn" onclick="openRules()">Правила</button>
-	</div>
-	
-	
-	<div id="instructions">
-	<button id="closeBtn" onclick="closeInst()">X</button>
-	<h1>Правила:</h1>
-	<ol>
-		<li>Выберите цвет.</li>
-		<li>Укажите Вашу ставку (сколько Вы собираетесь дать денег).</li>
-		<li>Нажми на кнопку "Крутить"!</li>
-	</ol>
-	
-	<h1>Если барабан показал цвет, который Вы выбрали, то Вы выиграли!</h1>
-		<ul>
-			<li>Если Вы угадали Чёрный/Красный цвет, то вы получите двойной выигрыш!</li>
-			<li>Если Вы угадали Зелёный цвет, то Вам вернется 15-кратный выигрыш!!</li>
-			<br />
-			<li>Если цвет барабана не совпал с Вашим, то Вы проиграли.</li>
-		</ul>
-		<br />
-		<a href="/../index.html"><img src="/../img/Logo2.png" style = "max-width: 360px;"></a>
-	</div>
-	
-	
-	<div id="wheel">
-	<div class="slotsbar">
-	<table class="slots">
-	<tr id="slotparent">
-	</tr>
-	</table>
-	</div>
-	
-	</div>
-	
-	<div id="wheelback">
-	<h1 id="winlose">Loading... </h1>
-	<h2 id="winnings">by Azer Sadykhzadeh</h2>
-	</div>
-	<script src="script.js"> </script>
-	</body>
+
+<head>
+    <link rel="shortcut icon" href="/../img/icon.png" type="image/x-icon">
+    <title>Испытай удачу! | Coder Helper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="onLoad()">
+    <div class="topbox">
+        <h1 id="money">Ваш баланс: </h1>
+    </div>
+
+    <div class="recentsbox">
+        <h2 id="result">Результаты: </h2>
+        <table class="recents">
+            <tr id="recents">
+                <td id="c0">
+                    <p>##</p>
+                </td>
+                <td id="c1">
+                    <p>##</p>
+                </td>
+                <td id="c2">
+                    <p>##</p>
+                </td>
+                <td id="c3">
+                    <p>##</p>
+                </td>
+                <td id="c4">
+                    <p>##</p>
+                </td>
+                <td id="c5">
+                    <p>##</p>
+                </td>
+                <td id="c6">
+                    <p>##</p>
+                </td>
+                <td id="c7">
+                    <p>##</p>
+                </td>
+                <td id="c8">
+                    <p>##</p>
+                </td>
+                <td id="c9">
+                    <p>##</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="options">
+        <table align="center">
+            <tr class="changebet">
+
+                <td><button onclick="changeBet(1)">+1$</button></td>
+                <td><button onclick="changeBet(10)">+$10</button></td>
+                <td><button onclick="changeBet(100)">+$100</button></td>
+            </tr>
+            <tr class="changebet">
+                <td><button onclick="changeBet(-1)">-1$</button></td>
+                <td><button onclick="changeBet(-10)">-$10</button></td>
+                <td><button onclick="changeBet(-100)">-$100</button></td>
+            </tr>
+
+            <tr class="choices">
+
+                <td><button id="redbtn" onclick="choose('red')">Красный</button></td>
+                <td><button id="greenbtn" onclick="choose('green')">Зелёный</button></td>
+                <td><button id="blackbtn" onclick="choose('black')">Черный</button></td>
+            </tr>
+
+            <tr>
+                <tr class="changebet">
+                    <td></td>
+                    <td><button onclick="allin()">ALL IN</button></td>
+                    <td></td>
+                </tr>
+        </table>
+    </div>
+
+    <div class="underbox">
+        <!--button id="allinbtn" onclick="allin()">All In</button-->
+        <h1 id="wager">Bet: </h1>
+        <!--h2 id="choice">Choice: </h2-->
+        <button id="betbtn" onclick="placeBet()">Крути!</button>
+        <button id="rulesbtn" onclick="openRules()">Правила</button>
+    </div>
+
+
+    <div id="instructions">
+        <button id="closeBtn" onclick="closeInst()">X</button>
+        <h1>Правила:</h1>
+        <ol>
+            <li>Выберите цвет.</li>
+            <li>Укажите Вашу ставку (сколько Вы собираетесь дать денег).</li>
+            <li>Нажми на кнопку "Крутить"!</li>
+        </ol>
+
+        <h1>Если барабан показал цвет, который Вы выбрали, то Вы выиграли!</h1>
+        <ul>
+            <li>Если Вы угадали Чёрный/Красный цвет, то вы получите двойной выигрыш!</li>
+            <li>Если Вы угадали Зелёный цвет, то Вам вернется 15-кратный выигрыш!!</li>
+            <br />
+            <li>Если цвет барабана не совпал с Вашим, то Вы проиграли.</li>
+        </ul>
+        <br />
+        <a href="/../index.html"><img src="/../img/Logo2.png" style="max-width: 360px;"></a>
+    </div>
+
+
+    <div id="wheel">
+        <div class="slotsbar">
+            <table class="slots">
+                <tr id="slotparent">
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div id="wheelback">
+        <h1 id="winlose">Loading... </h1>
+        <h2 id="winnings">by Azer Sadykhzadeh</h2>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+
 </html>

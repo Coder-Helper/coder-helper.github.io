@@ -1,229 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta name="googlebot" content="noindex">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Coder Helper</title>
-	<!--all css files-->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/css/slick.min.css">
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<link rel="stylesheet" href="assets/css/magnific.pupup.css">
-	<link rel="stylesheet" href="assets/css/sweet.alert.css">
-	<link rel="stylesheet" href="assets/css/slicknav.css">
-	<link rel="stylesheet" href="assets/css/main.css">
-	<!-- main stylesheet -->
-	<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-	<!-- Скрипт внизу показывает время. На azscript.js работать не будет, поэтому пихаю сюды -->
-	<script type="text/javascript">
-		function startTime() {
-			var tm = new Date();
-			var h = tm.getHours();
-			var m = tm.getMinutes();
-			var s = tm.getSeconds();
-			m = checkTime(m);
-			s = checkTime(s);
-			document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
-			t = setTimeout('startTime()', 500);
-		}
+    <meta name="googlebot" content="noindex">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coder Helper</title>
+    <!--all css files-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/magnific.pupup.css">
+    <link rel="stylesheet" href="assets/css/sweet.alert.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- main stylesheet -->
+    <meta property="og:title" content="Coder Helper" />
+    <meta property="og:image" content="https://coder-helper.github.io/img/Logo2.png" />
+    <meta property="og:url" content="https://coder-helper.github.io" />
+    <meta property="og:description" content="Сайт, который облегчает жизнь." />
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <!-- Скрипт внизу показывает время. На azscript.js работать не будет, поэтому пихаю сюды -->
+    <script type="text/javascript">
+        function startTime() {
+            let tm = new Date();
+            let h = tm.getHours();
+            let m = tm.getMinutes();
+            let s = tm.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+            t = setTimeout('startTime()', 500);
+        }
 
-		function checkTime(i) {
-			if (i < 10) {
-				i = "0" + i;
-			}
-			return i;
-		}
-	</script>
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+    </script>
 </head>
+
 <body onload="startTime()">
-	<div class="preloader">
-		<div class="inner text-center">
-			<span class="preloader-spin"></span>
-		</div>
-	</div>
-	<div class="site_wrap">
-		<div class="eco--header--wraper eco--header--1">
-			<div class="eco--header--top">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-2 col-xs-4">
-							<div class="eco--logo">
-								<a href="index.html"><img src="img/Logo2.png"></a>
-							</div>
-						</div>
-						<div class="col-md-10 col-xs-8">
-							<div class="eco--header--btn text-right">
-								<a href="index_math.html" class="eco--btn">
-									<p id="txt" style="margin: 0 0 0px !important; font-size: 17px;"></p>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- end .eco-header-top -->
-			<div class="eco--header--bottom">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7 eco--menu--col col-sm-6 clearfix">
-							<nav class="eco--main--menu">
-								<ul>
-									<!--<li><a href="#">...</a></li>-->
-									<li><a href="#">Математика</a>
-										<ul class="sub-menu">
-											<li><a onclick="kvadratnoye_uravneniye()">Кв-ое Уравнение</a></li>
-											<li><a onclick="svoistvo()">Свойство числа</a></li>
-											<li><a>Римские числа</a>
-												<ul class="sub-menu">
-													<li><a onclick="to_roman()">Арабский/Римский</a></li>
-													<li><a onclick="from_roman()">Римский/Арабский</a></li>
-													<!--<li><a href="#">Появится вскоре...</a></li>-->
-												</ul>
-											</li>
-										</ul>
-									</li>
+    <div class="preloader">
+        <div class="inner text-center">
+            <span class="preloader-spin"></span>
+        </div>
+    </div>
+    <div class="site_wrap">
+        <div class="eco--header--wraper eco--header--1">
+            <div class="eco--header--top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-4">
+                            <div class="eco--logo">
+                                <a href="index.html"><img src="img/Logo2.png"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-10 col-xs-8">
+                            <div class="eco--header--btn text-right">
+                                <a href="index_math.html" class="eco--btn">
+                                    <p id="txt" style="margin: 0 0 0px !important; font-size: 17px;"></p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end .eco-header-top -->
+            <div class="eco--header--bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 eco--menu--col col-sm-6 clearfix">
+                            <nav class="eco--main--menu">
+                                <ul>
+                                    <!--<li><a href="#">...</a></li>-->
+                                    <li><a href="#">Математика</a>
+                                        <ul class="sub-menu">
+                                            <li><a onclick="kvadratnoye_uravneniye()">Кв-ое Уравнение</a></li>
+                                            <li><a onclick="svoistvo()">Свойство числа</a></li>
+                                            <li><a>Римские числа</a>
+                                                <ul class="sub-menu">
+                                                    <li><a onclick="to_roman()">Арабский/Римский</a></li>
+                                                    <li><a onclick="from_roman()">Римский/Арабский</a></li>
+                                                    <!--<li><a href="#">Появится вскоре...</a></li>-->
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
 
-									<li><a href="#">Спорткодинг</a>
-										<ul class="sub-menu">
-											<li><a href="#">Сайты</a>
-												<ul class="sub-menu">
-													<li><a target="_blank" href="http://www.e-olymp.com">E-olymp</a></li>
-													<li><a target="_blank" href="http://www.codeforces.com">Codeforces</a></li>
-													<li><a target="_blank" href="http://www.codechef.com">Codechef</a></li>
-													<li><a target="_blank" href="http://www.acmp.ru">acmp</a></li>
-													<li><a target="_blank" href="http://www.atcoder.jp">AtCoder</a></li>
-												</ul>
-											</li>
-											<li><a target= "_blank" href="reference/en/index.html">Reference</a>
-												<ul class="sub-menu">
-													<li><a target="_blank" href="reference/en/cpp.html">C++</a></li>
-													<li><a target="_blank" href="reference/en/c.html">C</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">Компиляторы</a>
+                                    <li><a href="#">Спорткодинг</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Сайты</a>
+                                                <ul class="sub-menu">
+                                                    <li><a target="_blank" href="http://www.e-olymp.com">E-olymp</a></li>
+                                                    <li><a target="_blank" href="http://www.codeforces.com">Codeforces</a></li>
+                                                    <li><a target="_blank" href="http://www.codechef.com">Codechef</a></li>
+                                                    <li><a target="_blank" href="http://www.acmp.ru">acmp</a></li>
+                                                    <li><a target="_blank" href="http://www.atcoder.jp">AtCoder</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a target="_blank" href="reference/en/index.html">Reference</a>
+                                                <ul class="sub-menu">
+                                                    <li><a target="_blank" href="reference/en/cpp.html">C++</a></li>
+                                                    <li><a target="_blank" href="reference/en/c.html">C</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Компиляторы</a>
 
-										<ul class="sub-menu">
-											<li><a href="https://ideone.com" title="Здесь есть компиляторы более 60-ти языков программирования" target="_blank">Компилятор(online)</a></li>
-											<li><a href="html_compiler.html" title="Это функционизированный компилятор, где ты можешь создавать, редактировать и запускать свой собственный HTML, CSS и JavaScript код." target="_blank">HTML/CSS/JS(online)</a></li>
-											<li><a target="_blank" href="https://codeblocks.org/downloads/26">Code::Blocks</a></li>
-										</ul>
-									</li>
-									<li><a href="#">WEB</a>
-										<ul class="sub-menu">
-											<li><a href="color_picker/index.html">Цвета</a>
-												<ul class="sub-menu">
-													<li><a href="color_picker/index.html">HEX - цвет</a></li>
-													<li><a href="C-Colors.html">Список</a></li>
-													<!--<li><a href="#">Появится вскоре...</a></li>-->
-													<li><a href="C-color_converter.html">Конвертеры кодов</a></li>
-												</ul>
-											</li>
-											<li><a href="html-named-special-symbols.html">Символы HTML</a></li>
-											<li><a target="_blank" href="https://download.sublimetext.com/Sublime%20Text%20Build%203176%20x64%20Setup.exe">Sublime Text 3</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Развлечения</a>
-										<ul class="sub-menu">
-											<li><a>ДЛЯ ПК</a>
-												<ul class="sub-menu">
-													<li><a href="snake_game/index.html">Змейка[beta]</a></li>
-													<li><a href="tetris_game/index.html">Тетрис</a></li>
-												</ul>
-											</li>
-											<li><a href="games/1/index.html">Испытай удачу</a></li>
-											<li><a href="reaction_test.html">Проверка реакции</a></li>
-											<li><a href="just_for_fun_antistress.html">Антистресс</a></li>
-											<li><a href="rock_paper_scissors/index.html">Кам/Нож/Бум</a></li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
-						</div>
-						<div class="col-md-5 col-sm-6  clearfix">
-							<nav class="eco--right--nav">
-								<ul>
-									<li><a href="about-us.html">О НАС</a></li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<h1 align="center">Привет!</h1>
-		<h2 align="center">Меню утилит наверху.</h2>
-		<h4 align="center"><a href="nohello/index.html">Не привет</a></h4>
-		<h4 align="center">
-			<a target = "_blank" href="https://github.com/Coder-Helper/coder-helper.github.io">We on Github.</a>
-		</h4>
-		<h3 align="center">Успехов во всём!</h3>
-		<div class="eco--footer eco--pd--100">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-3">
-						<div class="widget footer_widget">
-							<div class="eco--inner">
-								<p>Компьютер — это глупая машина, обладающая способностями выполнять невероятно умные вещи, тогда как программисты — это умные люди, у которых талант делать невероятные глупости. Короче, они нашли друг друга.
-									<br>-Bill Bryson</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="widget footer_widget">
-							<div class="eco--inner">
-								<h4>Мы в соц.сетях</h4>
-								<ul>
-									<li><a href="#">ВКонтакте</a></li>
-									<li><a href="#">Facebook</a></li>
-									<li><a href="#">Instagram</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="widget footer_widget">
-							<div class="eco--inner">
-								<h4>Поддержка нам!</h4>
-								<ul>
-									<li><a href="#">Пожертвование</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="widget footer_widget">
-							<div class="eco--inner">
-								<h4>Обратная связь</h4>
-								<ul>
-									<li><a href="https://t.me/sadykhzadeh">Telegram</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end .site_wrap -->
+                                        <ul class="sub-menu">
+                                            <li><a href="https://ideone.com" title="Здесь есть компиляторы более 60-ти языков программирования" target="_blank">Компилятор(online)</a></li>
+                                            <li><a href="html_compiler.html" title="Это функционизированный компилятор, где ты можешь создавать, редактировать и запускать свой собственный HTML, CSS и JavaScript код." target="_blank">HTML/CSS/JS(online)</a></li>
+                                            <li><a target="_blank" href="https://codeblocks.org/downloads/26">Code::Blocks</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">WEB</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="color_picker/index.html">Цвета</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="color_picker/index.html">HEX - цвет</a></li>
+                                                    <li><a href="C-Colors.html">Список</a></li>
+                                                    <!--<li><a href="#">Появится вскоре...</a></li>-->
+                                                    <li><a href="C-color_converter.html">Конвертеры кодов</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="html-named-special-symbols.html">Символы HTML</a></li>
+                                            <li><a target="_blank" href="https://download.sublimetext.com/Sublime%20Text%20Build%203176%20x64%20Setup.exe">Sublime Text 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Развлечения</a>
+                                        <ul class="sub-menu">
+                                            <li><a>ДЛЯ ПК</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="snake_game/index.html">Змейка[beta]</a></li>
+                                                    <li><a href="tetris_game/index.html">Тетрис</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="games/1/index.html">Испытай удачу</a></li>
+                                            <li><a href="reaction_test.html">Проверка реакции</a></li>
+                                            <li><a href="just_for_fun_antistress.html">Антистресс</a></li>
+                                            <li><a href="rock_paper_scissors/index.html">Кам/Нож/Бум</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-md-5 col-sm-6  clearfix">
+                            <nav class="eco--right--nav">
+                                <ul>
+                                    <li><a href="about-us.html">О НАС</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 align="center">Привет!</h1>
+        <h2 align="center">Меню утилит наверху.</h2>
+        <h4 align="center"><a href="nohello/index.html">Не привет</a></h4>
+        <h4 align="center">
+            <a target="_blank" href="https://github.com/Coder-Helper/coder-helper.github.io">We on Github.</a>
+        </h4>
+        <h3 align="center">Успехов во всём!</h3>
+        <div class="eco--footer eco--pd--100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="widget footer_widget">
+                            <div class="eco--inner">
+                                <p>Компьютер — это глупая машина, обладающая способностями выполнять невероятно умные вещи, тогда как программисты — это умные люди, у которых талант делать невероятные глупости. Короче, они нашли друг друга.
+                                    <br>-Bill Bryson</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="widget footer_widget">
+                            <div class="eco--inner">
+                                <h4>Мы в соц.сетях</h4>
+                                <ul>
+                                    <li><a href="#">ВКонтакте</a></li>
+                                    <li><a href="#">Facebook</a></li>
+                                    <li><a href="#">Instagram</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="widget footer_widget">
+                            <div class="eco--inner">
+                                <h4>Поддержка нам!</h4>
+                                <ul>
+                                    <li><a href="#">Пожертвование</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="widget footer_widget">
+                            <div class="eco--inner">
+                                <h4>Обратная связь</h4>
+                                <ul>
+                                    <li><a href="https://t.me/sadykhzadeh">Telegram</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end .site_wrap -->
 
-	<!--all JavaScript Files-->
-	<script src="azscript.js"></script>
+    <!--all JavaScript Files-->
+    <script src="azscript.js"></script>
 
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/vendor/bootstrap.min.js"></script>
-	<script src="assets/js/vendor/slick.min.js"></script>
-	<script src="assets/js/vendor/magnific.popup.min.js"></script>
-	<script src="assets/js/vendor/ajaxchimp.min.js"></script>
-	<script src="assets/js/vendor/sweet.alert.min.js"></script>
-	<script src="assets/js/vendor/particle.min.js"></script>
-	<script src="assets/js/particle.config.js"></script>
-	<script src="assets/js/vendor/slicknav.min.js"></script>
-	<script src="assets/js/active.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/slick.min.js"></script>
+    <script src="assets/js/vendor/magnific.popup.min.js"></script>
+    <script src="assets/js/vendor/ajaxchimp.min.js"></script>
+    <script src="assets/js/vendor/sweet.alert.min.js"></script>
+    <script src="assets/js/vendor/particle.min.js"></script>
+    <script src="assets/js/particle.config.js"></script>
+    <script src="assets/js/vendor/slicknav.min.js"></script>
+    <script src="assets/js/active.js"></script>
 
 </html>

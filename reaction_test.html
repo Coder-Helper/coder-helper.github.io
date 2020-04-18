@@ -3,104 +3,104 @@
 <html lang="en">
 
 <head>
-	<meta name="googlebot" content="noindex">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Coder Helper</title>
-	<!--all css files-->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/css/slick.min.css">
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<link rel="stylesheet" href="assets/css/magnific.pupup.css">
-	<link rel="stylesheet" href="assets/css/sweet.alert.css">
-	<link rel="stylesheet" href="assets/css/slicknav.css">
-	<link rel="stylesheet" href="assets/css/main.css">
+    <meta name="googlebot" content="noindex">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coder Helper</title>
+    <!--all css files-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/magnific.pupup.css">
+    <link rel="stylesheet" href="assets/css/sweet.alert.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 
-	<!-- main stylesheet -->
+    <!-- main stylesheet -->
 
-	<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 
-	<!-- Скрипт внизу показывает время. На azscript.js работать не будет, поэтому пихаю сюды -->
-	<script type="text/javascript">
-		function startTime() {
-			var tm = new Date();
-			var h = tm.getHours();
-			var m = tm.getMinutes();
-			var s = tm.getSeconds();
-			m = checkTime(m);
-			s = checkTime(s);
-			document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
-			t = setTimeout('startTime()', 500);
-		}
+    <!-- Скрипт внизу показывает время. На azscript.js работать не будет, поэтому пихаю сюды -->
+    <script type="text/javascript">
+        function startTime() {
+            var tm = new Date();
+            var h = tm.getHours();
+            var m = tm.getMinutes();
+            var s = tm.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+            t = setTimeout('startTime()', 500);
+        }
 
-		function checkTime(i) {
-			if (i < 10) {
-				i = "0" + i;
-			}
-			return i;
-		}
-	</script>
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+    </script>
 </head>
 
 <body onload="startTime()">
 
-	<div class="preloader">
+    <div class="preloader">
 
-		<div class="inner text-center">
+        <div class="inner text-center">
 
-			<span class="preloader-spin"></span>
+            <span class="preloader-spin"></span>
 
-		</div>
+        </div>
 
-	</div>
+    </div>
 
-	<center>
-		<a href="index.html"><img src="img/Logo2.png" style="max-width: 360px;"></a>
-	</center>
+    <center>
+        <a href="index.html"><img src="img/Logo2.png" style="max-width: 360px;"></a>
+    </center>
 
-	<div class="site_wrap">
+    <div class="site_wrap">
 
-		<style>
-			#tester {
-				background-color: black;
-				width: 350px;
-				height: 400px;
-			}
-		</style>
-		<script src="reaction_test_script.js">
-		</script>
-		<div id="tester"></div>
-		<button id="starter" onclick="start()">Старт</button>
-		<form>
-			<input type="button" value="Нужна помощь?" onclick='alert("Чтобы проверить скорость своей реакции, следует нажать под черным квадратом кнопку [Старт]. Покажется зелёный квадрат. Когда квадрат станет красным, Вам сделует нажать на него как можно скорее. [Примечание: если Вы используете сенсор, то, к сожалению, программа будет работать не корректно] Нажатие на зелёную кнопку программа будет принимать как фальстарт. После того, как Вы нажали на красный квадрат будут выведены наихудший и наилучший результат (в миллисекундах), а также средний результат всех Ваших тестов в виде уведомления.")'>
-		</form>
+        <style>
+            #tester {
+                background-color: black;
+                width: 350px;
+                height: 400px;
+            }
+        </style>
+        <script src="reaction_test_script.js">
+        </script>
+        <div id="tester"></div>
+        <button id="starter" onclick="start()">Старт</button>
+        <form>
+            <input type="button" value="Нужна помощь?" onclick='alert("Чтобы проверить скорость своей реакции, следует нажать под черным квадратом кнопку [Старт]. Покажется зелёный квадрат. Когда квадрат станет красным, Вам сделует нажать на него как можно скорее. [Примечание: если Вы используете сенсор, то, к сожалению, программа будет работать не корректно] Нажатие на зелёную кнопку программа будет принимать как фальстарт. После того, как Вы нажали на красный квадрат будут выведены наихудший и наилучший результат (в миллисекундах), а также средний результат всех Ваших тестов в виде уведомления.")'>
+        </form>
 
-		<!--all JavaScript Files-->
+        <!--all JavaScript Files-->
 
-		<script src="azscript.js"></script>
+        <script src="azscript.js"></script>
 
-		<script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
 
-		<script src="assets/js/vendor/bootstrap.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
 
-		<script src="assets/js/vendor/slick.min.js"></script>
+        <script src="assets/js/vendor/slick.min.js"></script>
 
-		<script src="assets/js/vendor/magnific.popup.min.js"></script>
+        <script src="assets/js/vendor/magnific.popup.min.js"></script>
 
-		<script src="assets/js/vendor/ajaxchimp.min.js"></script>
+        <script src="assets/js/vendor/ajaxchimp.min.js"></script>
 
-		<script src="assets/js/vendor/sweet.alert.min.js"></script>
+        <script src="assets/js/vendor/sweet.alert.min.js"></script>
 
-		<script src="assets/js/vendor/particle.min.js"></script>
+        <script src="assets/js/vendor/particle.min.js"></script>
 
-		<script src="assets/js/particle.config.js"></script>
+        <script src="assets/js/particle.config.js"></script>
 
-		<script src="assets/js/vendor/slicknav.min.js"></script>
+        <script src="assets/js/vendor/slicknav.min.js"></script>
 
-		<script src="assets/js/active.js"></script>
+        <script src="assets/js/active.js"></script>
 </body>
 
 </html>

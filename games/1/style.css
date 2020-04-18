@@ -8,7 +8,7 @@ body {
     background-color: #238C20;
 }
 
-.topbox{
+.topbox {
     overflow: auto;
     position: relative;
     /*background-color: blue;*/
@@ -19,10 +19,9 @@ body {
     border: 1px solid black;
     border-bottom: none;
     background-color: #238C20;
-    
 }
 
-.options{
+.options {
     position: relative;
     width: 100vw;
     height: 30vh;
@@ -35,7 +34,7 @@ body {
     border-bottom: none;
 }
 
-button{
+button {
     background-color: white;
     position: relative;
     text-align: center;
@@ -47,7 +46,7 @@ button{
     width: 30vw;
 }
 
-.underbox button{
+.underbox button {
     color: black;
     height: 8vh;
     width: 35vw;
@@ -55,7 +54,7 @@ button{
     border: 2px solid black;
 }
 
-.changebet button{
+.changebet button {
     width: 18vw;
     height: 5vh;
     margin: 0 auto;
@@ -63,34 +62,34 @@ button{
     background-color: #238C20;
 }
 
-
-#blackbtn{
+#blackbtn {
     background-color: black;
 }
-#greenbtn{
+
+#greenbtn {
     background-color: #05AC54;
 }
-#redbtn{
+
+#redbtn {
     background-color: red;
 }
 
-.choices button{
-    
+.choices button {
     height: 50px;
 }
 
-canvas#recent10{
+canvas#recent10 {
     background-color: white;
 }
 
-.recents td{
+.recents td {
     /*background-color: grey;*/
     height: 35px;
     width: 35px;
     border-radius: 50%;
 }
 
-.recentsbox{
+.recentsbox {
     background-color: #238C20;
     height: 15vh;
     width: 100vw;
@@ -99,13 +98,14 @@ canvas#recent10{
     border-top: none;
     border-bottom: none;
 }
-.recentsbox h2{
+
+.recentsbox h2 {
     top: 0;
     padding: 0;
     margin: 0;
 }
 
-.underbox{
+.underbox {
     background-color: #238C20;
     position: relative;
     height: 45vh;
@@ -117,13 +117,13 @@ canvas#recent10{
     border-top: none;
 }
 
-.underbox button{
+.underbox button {
     margin-left: 32.5vw;
     margin-right: 32.5vw;
     font-size: 20px;
 }
 
-.underbox h1{
+.underbox h1 {
     width: 100vw;
     text-align: center;
     margin: 0;
@@ -133,8 +133,7 @@ canvas#recent10{
     font-size: 35px;
 }
 
-
-#instructions{
+#instructions {
     position: absolute;
     width: 90vw;
     height: 90vh;
@@ -145,28 +144,29 @@ canvas#recent10{
     margin-top: 5vh;
     margin-bottom: 5vh;
     border: 2px dotted black;
-    color:white;
+    color: white;
 }
 
-#instructions h1{
+#instructions h1 {
     background-color: black;
     margin-left: 15px;
     color: white;
     font-family: cursive;
 }
 
-#instructions li{
+#instructions li {
     background-color: black;
     margin-left: 15px;
     color: white;
     font-weight: 900;
 }
 
-ol, ul{
+ol,
+ul {
     background-color: black;
 }
 
-#closeBtn{
+#closeBtn {
     margin: 0;
     position: relative;
     border-radius: 50%;
@@ -180,7 +180,7 @@ ol, ul{
     color: white;
 }
 
-#recents p{
+#recents p {
     color: #238C20;
 }
 
@@ -194,9 +194,8 @@ ol, ul{
     width: 100vw;
     top: 0;
     height: 15vh;
-    
     -webkit-animation: mymove 3s forwards;
-    -webkit-animation-timing-function: linear; 
+    -webkit-animation-timing-function: linear;
     animation: mymove 3s forwards;
     animation-delay: .5s;
     animation-timing-function: ease-in-out;
@@ -204,18 +203,24 @@ ol, ul{
 }
 
 @-webkit-keyframes mymove {
-    from {left: 0px;}
-    to {left: -9340px;}
+    from {
+        left: 0px;
+    }
+    to {
+        left: -9340px;
+    }
 }
 
 @keyframes mymove {
-    from {left: 0px;}
-    to {left: -9340px;}
+    from {
+        left: 0px;
+    }
+    to {
+        left: -9340px;
+    }
 }
 
-
-
-.slotsbar{
+.slotsbar {
     position: relative;
     height: 20vh;
     width: 12000px;
@@ -224,14 +229,14 @@ ol, ul{
     z-index: 2;
 }
 
-.slots{
+.slots {
     height: 100%;
     width: 100%;
     text-align: center;
     background-color: white;
 }
 
-.slots td{
+.slots td {
     background-color: blue;
     height: 100%;
     width: 25vw;
@@ -239,36 +244,33 @@ ol, ul{
     border: 0px solid gold;
 }
 
-
-
-.slots h1{
+.slots h1 {
     background-color: blue;
 }
 
-
-#wheelback{
+#wheelback {
     position: absolute;
     background-color: #238C20;
     height: 100vh;
     width: 100vw;
     top: 0;
-    left: 0;    
+    left: 0;
 }
 
-#wheelback h1{
+#wheelback h1 {
     width: 100%;
     text-align: center;
     margin: 0;
     margin-top: 30vh;
 }
 
-#wheelback h2{
+#wheelback h2 {
     width: 100%;
     text-align: center;
     margin: 0;
 }
 
-#rulesbtn{
+#rulesbtn {
     position: absolute;
     margin: 0;
     border: 2px solid white;
@@ -278,7 +280,7 @@ ol, ul{
     left: 25px;
 }
 
-#betbtn{
+#betbtn {
     width: 50vw;
     height: 10vh;
     margin-left: 25vw;
@@ -288,7 +290,7 @@ ol, ul{
     border: 2px solid white;
 }
 
-#allinbtn{
+#allinbtn {
     width: 20vw;
     top: 0;
     margin-left: 40vw;
